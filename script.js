@@ -1,19 +1,7 @@
 "use strict";
 
 /* 
-? Learning JavaScript functions and loops 
-!  Contents:
-*  0. Music
-*  1. Countdown 
-*  2. Loops
-*  3. Arrays
-*  4. Objects
-*  5. Conditional statements
-*  6. Functions and arrays
-*  7. Functions and objects
-*  8. Functions and conditional statements
-*  9. Functions and loops
-*  10. Functions and arrays
+? Learning JavaScript functions and loops!
 */
 
 // * Music * //
