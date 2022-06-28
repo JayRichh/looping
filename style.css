@@ -113,6 +113,19 @@ p {
   height: 300px;
 }
 
+.arrayWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #333 1px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 400px;
+  height: auto;
+  min-height: 200px;
+}
+
 .left {
   flex: 1;
   display: flex;

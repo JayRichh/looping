@@ -11,7 +11,7 @@
     </script>
   </head>
   <body id="content">
-    <iframe
+    <!--<iframe
       id="youtubePlayer"
       width="280"
       height="157.5"
@@ -20,7 +20,7 @@
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-    ></iframe>
+    ></iframe>-->
     <canvas class="confetti" id="canvas"></canvas>
     <header>
       <h1>
@@ -31,7 +31,7 @@
       <h1>JavaScriptin ye boi</h1>
     </header>
     <div id="wrapper">
-      <div class="countdownWrapper">
+      <div class="countdownWrapper"> <!-- Countdown -->
         <p>
           Objective: Create javascript function to countdown from 10 to Liftoff!
         </p>
@@ -41,7 +41,7 @@
         <p id="countdown"></p>
         <p id="yee"></p>
       </div>
-      <div class="listWrapper">
+      <div class="listWrapper"> <!-- List filter -->
         <div class="left">
           <p id="whoDoneIt">Names in arrays</p>
           <p id="list"></p>
@@ -55,12 +55,24 @@
           <p id="denied"></p>
         </div>
       </div>
+      <div class="arrayWrapper"> <!-- Array -->
+        <p>
+          Objective: Print array item to new li element in the DOM.
+        </p>
+        <button id="liBtn" type="button" onclick="listItems()">
+          Button
+        </button>
+          <ul id="listOutput">
+            
+          </ul>
+      </div>
+      </div>
     </div>
     <footer>
       <h3>Hey</h3>
       <p>Hello</p>
     </footer>
-
+    comment
     <script src="./resources/confetti.js"></script>
     <!-- Confetti -->
     <script src="script.js"></script>

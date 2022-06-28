@@ -132,3 +132,26 @@ function randomBackground() {
   }
   colorWindow.style.backgroundColor = randomColorGenerator(); // change color of window
 }
+
+// * Add array item to li listing within HTML * //
+
+const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
+const listArray = document.createElement("ul");
+const liBtn = document.querySelector("#liBtn");
+const listOutput = document.querySelector("#listOutput");
+
+function listItems() {
+  if (listOutput.childElementCount === 0) {
+    // if listOutput is empty, add list items
+    for (let i = 0; i < myArray.length; i++) {
+      // for loop to display list items
+      let listItem = document.createElement("li"); // create list item
+      listItem.textContent = myArray[i]; // add list item text
+      listArray.appendChild(listItem); // add list item to list
+    }
+    listOutput.appendChild(listArray); // add list to HTML
+  } else {
+    // if listOutput is not empty, remove list items
+    listOutput.removeChild(listArray); // remove list from HTML
+  }
+}
