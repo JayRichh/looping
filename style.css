@@ -3,6 +3,14 @@ html {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+#youtubePlayer {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
 }
 
 img {
@@ -18,18 +26,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #848484;
 }
 
 body {
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 h1 {
@@ -40,6 +51,18 @@ h1 {
 
 p {
   text-align: center;
+}
+
+#wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  background-color: #e5e5e5;
+  padding: 1.5rem 1rem;
 }
 
 .confetti {
@@ -61,7 +84,45 @@ p {
   border: #333 1px solid;
   border-radius: 5px;
   background-color: #fff;
-  margin: 0 auto;
-  width: 200px;
+  width: 400px;
   height: 200px;
+}
+
+.listWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #333 1px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #333 1px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
 }

@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="application/javascript">document.interestCohort = null;</script>
+    <script type="application/javascript">
+      document.interestCohort = null;
+    </script>
   </head>
   <body id="content">
+    <iframe
+      id="youtubePlayer"
+      width="280"
+      height="157.5"
+      src="https://www.youtube.com/embed/-vO_3gKWTZM"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
     <canvas class="confetti" id="canvas"></canvas>
     <header>
       <h1>
@@ -18,15 +30,36 @@
       </h1>
       <h1>JavaScriptin ye boi</h1>
     </header>
-    <div class="countdownWrapper">
-      <button type="button" onclick="countdownDisplay(); celebrate()">
-        Launch Countdown
-      </button>
-      <p id="countdown"></p>
-      <p id="yee"></p>
+    <div id="wrapper">
+      <div class="countdownWrapper">
+        <p>
+          Objective: Create javascript function to countdown from 10 to Liftoff!
+        </p>
+        <button type="button" onclick="countdownDisplay(); celebrate()">
+          Launch Countdown
+        </button>
+        <p id="countdown"></p>
+        <p id="yee"></p>
+      </div>
+      <div class="listWrapper">
+        <div class="left">
+          <p id="whoDoneIt">Names in arrays</p>
+          <p id="list"></p>
+        </div>
+        <div class="right">
+          <p>Click the button to filter through names</p>
+          <button id="btn" type="submit" onclick="list(); colorChanger()">
+            Listing Sorter
+          </button>
+          <p id="admitted"></p>
+          <p id="denied"></p>
+        </div>
+      </div>
     </div>
 
-    <script src="./resources/confetti.js"></script>  <!-- Confetti -->
-    <script src="script.js"></script> <!-- Objectives -->
+    <script src="./resources/confetti.js"></script>
+    <!-- Confetti -->
+    <script src="script.js"></script>
+    <!-- Objectives -->
   </body>
 </html>
