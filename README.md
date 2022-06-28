@@ -1,2 +1,5 @@
-Alright Github Co-pilot is a bit overkill for these projects turning that off.
 Testing looping within JavaScript.
+
+- Created main countdown function and implimented to HTML page to improve   display.
+- Added confetti display upon launch to celebrate.
+- 
