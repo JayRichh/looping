@@ -1,4 +1,5 @@
 "use strict";
+
 /* 
 ? Learning JavaScript functions and loops 
 !  Contents:
@@ -69,16 +70,9 @@ const letsgo = document.querySelector("#letsgo");
 admitted.textContent = "Admitted: ";
 denied.textContent = "Denied: ";
 
-// TODO: add function to change colors
-/*
-function colorChanger(event) {
-  if (event.target.id === "admitted") {
-    event.target.style.color = "green";
-  } else if (event.target.id === "denied") {
-    event.target.style.color = "red";
-  }
-}
-*/
+// TODO: add function to change colors of window
+// * Cracked it ye boi * //
+
 function list() {
   let guestList = [
     // guest list array
@@ -134,8 +128,19 @@ function list() {
   admitted.textContent += "."; // add period
   denied.textContent = denied.textContent.slice(0, -2); // remove last comma
   denied.textContent += "."; // add period
+}
 
-  guestList.clear(); // clear guest list
-  admittedList.clear(); // clear admitted list
-  deniedList.clear(); // clear denied list
+const button = document.querySelector("#btn");
+const colorWindow = document.querySelector(".left");
+
+function randomBackground() {
+  function randomColorGenerator() {
+    // random color generator
+    let r = Math.floor(Math.random() * 256); // random number generator
+    let g = Math.floor(Math.random() * 256); // random number generator
+    let b = Math.floor(Math.random() * 256); // random number generator
+    let color = "rgb(" + r + ", " + g + ", " + b + ")"; // color generator
+    return color;
+  }
+  colorWindow.style.backgroundColor = randomColorGenerator(); // change color of window
 }
