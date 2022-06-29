@@ -134,7 +134,6 @@ function randomBackground() {
 }
 
 // * Add array item to li listing within HTML * //
-// TODO: fix bug where list keeps growing
 
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const listArray = document.createElement("ul");
@@ -148,14 +147,10 @@ function listItems() {
       // for loop to display list items
       let listItem = document.createElement("li"); // create list item
       listItem.textContent = myArray[i]; // add list item text
-      listArray.appendChild(listItem); // add list item to list
+      listArray.appendChild(listItem); // add list item to listx
     }
-    setTimeout(function () {
-      listOutput.appendChild(listArray); // add list to listOutput, mate this 1s delay is pointless
-    } , 1000);
-  } else {
-    // if listOutput is not empty, remove list items
-    listOutput.removeChild(listArray); // remove list from HTML
+    listOutput.appendChild(listArray); // add list to HTML
+    return listArray;
   }
 }
 
