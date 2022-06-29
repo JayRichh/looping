@@ -219,7 +219,6 @@ function loopNumbers() {
   paragraph.textContent = paragraph.textContent.slice(0, -2); // remove last comma
   paragraph.textContent += "."; // add period
   celebrate(); // celebrate
-  stop(); // stop
 }
 function isPrime() {
   // function to check if number is prime
