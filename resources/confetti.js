@@ -92,6 +92,9 @@ render = () => {
     // Draw confetto
     ctx.fillRect(-width / 2, -height / 2, width, height);
 
+    // Clear all canvas transformations
+        
+
     // Reset transform matrix
     ctx.setTransform(1, 0, 0, 1, 0, 0);
   });
@@ -106,12 +109,12 @@ render = () => {
 //---------Execution--------
 initConfetti();
 render();
-*/
+
 //----------Resize----------
 window.addEventListener('resize', function () {
   resizeCanvas();
 });
-
+*/
 //------------Click------------
 /*
 window.addEventListener('click', function () {
