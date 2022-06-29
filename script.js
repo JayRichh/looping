@@ -49,6 +49,7 @@ function celebrate() {
     render();
     return celebrate();
   }, 10000);
+  stop(); // stop function after 10 seconds of celebration
 }
 
 // * Guest List Filling In Functions * //
@@ -218,6 +219,7 @@ function loopNumbers() {
   paragraph.textContent = paragraph.textContent.slice(0, -2); // remove last comma
   paragraph.textContent += "."; // add period
   celebrate(); // celebrate
+  stop(); // stop
 }
 function isPrime() {
   // function to check if number is prime
