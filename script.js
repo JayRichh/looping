@@ -47,6 +47,7 @@ function celebrate() {
     document.getElementById("yee").innerHTML = "Yee Boi!";
     initConfetti();
     render();
+    return celebrate();
   }, 10000);
 }
 
@@ -133,11 +134,10 @@ function randomBackground() {
   colorWindow.style.backgroundColor = randomColorGenerator(); // change color of window
 }
 
-// * Add array item to li listing within HTML * //
+// * Add array item * //
 
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const listArray = document.createElement("ul");
-const liBtn = document.querySelector("#liBtn");
 const listOutput = document.querySelector("#listOutput");
 
 function listItems() {
@@ -160,7 +160,6 @@ function listItems() {
 numbers (phonebook) and, if it finds the name, outputs the name and phone 
 number into the paragraph (para) and then exits the loop before it has run its course.  */
 
-const searchBtn = document.querySelector("#searchBtn");
 const input = document.querySelector("#input");
 const para = document.querySelector("#para");
 const phonebook = [
@@ -199,3 +198,36 @@ function searchPhonebook() {
     }
   }
 }
+
+// * Prime Numbers * //
+
+let i = 500;
+let paragraph = document.querySelector("#paragraph"); 
+let prime = document.querySelector("#prime");
+
+//function to loop through numbers 2 to 500 backwards and run isPrime function on them.
+function loopNumbers() {
+  for (let i = 500; i >= 2; i--) {
+    // for loop to loop through numbers 2 to 500
+    if (isPrime(i)) {
+      // if number is prime, display number
+      paragraph.textContent += i + ", ";
+    }
+  }
+  //remove last comma from paragraph text & add period
+  paragraph.textContent = paragraph.textContent.slice(0, -2); // remove last comma
+  paragraph.textContent += "."; // add period
+  celebrate(); // celebrate
+}
+function isPrime() {
+  // function to check if number is prime
+  for (let i = 2; i < this; i++) {
+    // for loop to check if number is prime
+    if (this % i === 0) {
+      // if number is divisible by i, return false
+      return false;
+    }
+  }
+  return true; // if number is not divisible by i, return true
+}
+
