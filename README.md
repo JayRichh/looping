@@ -4,5 +4,7 @@ Testing looping within JavaScript.
 - Added confetti display upon launch to celebrate.
 - Added arrays and filtering/ sort of approved/ denied names to lists.
 - Added color changer to background styling of div on event click.
+- Added new functions with array object searching, DOM lists.
+- Fixed bug with infanitely growing list.
 
 https://jayrichh.github.io/looping/
