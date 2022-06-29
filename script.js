@@ -134,6 +134,7 @@ function randomBackground() {
 }
 
 // * Add array item to li listing within HTML * //
+// TODO: fix bug where list keeps growing
 
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const listArray = document.createElement("ul");
@@ -149,9 +150,54 @@ function listItems() {
       listItem.textContent = myArray[i]; // add list item text
       listArray.appendChild(listItem); // add list item to list
     }
-    listOutput.appendChild(listArray); // add list to HTML
+    setTimeout(function () {
+      listOutput.appendChild(listArray); // add list to listOutput, mate this 1s delay is pointless
+    } , 1000);
   } else {
     // if listOutput is not empty, remove list items
     listOutput.removeChild(listArray); // remove list from HTML
+  }
+}
+
+/* Write a simple program that, given a name, searches an array of objects containing names and phone 
+numbers (phonebook) and, if it finds the name, outputs the name and phone 
+number into the paragraph (para) and then exits the loop before it has run its course.  */
+
+const searchBtn = document.querySelector("#searchBtn");
+const input = document.querySelector("#input");
+const para = document.querySelector("#para");
+const phonebook = [
+  { name: "John", phone: "555-5555" },
+  { name: "Jane", phone: "555-5555" },
+  { name: "Bob", phone: "555-5555" },
+  { name: "Mary", phone: "555-5555" },
+  { name: "Joe", phone: "555-5555" },
+  { name: "Jill", phone: "555-5555" },
+  { name: "Bill", phone: "555-5555" },
+  { name: "Juan", phone: "555-5555" },
+  { name: "Shpang", phone: "555-5555" },
+  { name: "Chris", phone: "555-5555" },
+  { name: "Colin", phone: "555-5555" },
+  { name: "Lola", phone: "555-5555" },
+  { name: "Phil", phone: "555-5555" },
+  { name: "Jenny", phone: "555-5555" },
+];
+
+function searchPhonebook() {
+  let search = input.value; // get value from input
+  function capitalizeFirstLetter(search) { // capitalize first letter of search function
+    return search.charAt(0).toUpperCase() + search.slice(1); // capitalize first letter of search string
+  }
+  search = capitalizeFirstLetter(search); // capitalize first letter of search
+  for (let i = 0; i < phonebook.length; i++) {
+    // for loop to search phonebook
+    
+    if (search === phonebook[i].name) {
+      // if search is equal to name in phonebook
+      para.textContent = phonebook[i].name + ": " + phonebook[i].phone; // display name and phone number
+      break; // break loop
+    } else {
+      para.textContent = "No match found."; // if no match found, display message
+    }
   }
 }
