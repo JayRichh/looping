@@ -182,13 +182,14 @@ const phonebook = [
 
 function searchPhonebook() {
   let search = input.value; // get value from input
-  function capitalizeFirstLetter(search) { // capitalize first letter of search function
+  function capitalizeFirstLetter(search) {
+    // capitalize first letter of search function
     return search.charAt(0).toUpperCase() + search.slice(1); // capitalize first letter of search string
   }
   search = capitalizeFirstLetter(search); // capitalize first letter of search
   for (let i = 0; i < phonebook.length; i++) {
     // for loop to search phonebook
-    
+
     if (search === phonebook[i].name) {
       // if search is equal to name in phonebook
       para.textContent = phonebook[i].name + ": " + phonebook[i].phone; // display name and phone number
